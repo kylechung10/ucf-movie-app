@@ -1,0 +1,55 @@
+
+Movie Collection App
+
+
+REQUIREMENTS
+- 6 MongoDB methods
+    ~ readMany, find [check]
+    ~ readOne, findOne [check]
+    ~ deleteOne [check]
+    ~ insertOne [check]
+    ~ updateOne [check]
+    ~ connect [check]
+    ~ close [check]
+
+- 4 Express routes
+    ~ PUT [check]
+    ~ GET [check]
+    ~ PATCH [check]
+    ~ DELETE [check]
+
+- 4 React componenets
+    ~ Home
+    ~ Search for movies/add ones
+    ~ View favorite movies/delete them
+    ~ Account Delete
+
+- Homepage
+    ~ Navigation
+        --Search
+        --Account
+        --Register/SignIn
+    ~ Stores/displays login state
+
+
+FEATURES
+
+- Search for a movie within the database, and return a collection based on keywords
+    ~ Express: GET
+    ~ MongoDB: readMany
+
+- Account creation, add new user to database to track favorite movies
+    ~ Express: PUT
+    ~ MongoDB: insertOne
+
+- Based on the search, add a selected movie to their existing personal account
+    ~ Express: PATCH
+    ~ MongoDB: updateOne
+
+- Delete user account
+    ~ Express: DELETE
+    ~ MongoDB: deleteOne
+
+- Search the users favorite movie collection, if logged in
+    ~ Express: GET
+    ~ MongoDB: readOne

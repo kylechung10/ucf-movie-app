@@ -1,0 +1,23 @@
+{
+  "name": "DIG4503C-Portfolio-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server && npm run server\" \"cd client && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylechung10/DIG4503C-Portfolio-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylechung10/DIG4503C-Portfolio-2/issues"
+  },
+  "homepage": "https://github.com/kylechung10/DIG4503C-Portfolio-2#readme",
+  "dependencies": {
+    "concurrently": "^6.0.2"
+  }
+}

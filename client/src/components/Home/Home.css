@@ -1,0 +1,139 @@
+.home button:hover,
+nav button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+/* Navigation styling */
+nav {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+nav ul {
+  padding: 20px 75px 20px 75px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  margin-left: 50px;
+}
+nav ul li:nth-child(1) {
+  margin-right: auto;
+  margin-left: 0;
+}
+.logo {
+  font-weight: 700;
+}
+nav ul li button {
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 5px;
+}
+.red-btn {
+  border: #b23b3b 1px solid;
+  color: #b23b3b;
+  padding: 5px;
+}
+
+/*Home Styling*/
+.home {
+  height: 90vh;
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  line-height: 30px;
+  width: 400px;
+  height: 50%;
+}
+.greeting {
+  font-size: 24px;
+  padding: 10px;
+}
+.home h2 {
+  font-size: 36px;
+}
+.signup {
+  width: 400px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #000;
+  border-radius: 30px;
+}
+.input-field {
+  font-size: 20px;
+  width: 80%;
+}
+.signup input {
+  width: 100%;
+  font-size: 16px;
+  height: 35px;
+  padding-left: 15px;
+  border-radius: 35px;
+  border: none;
+  margin-top: 5px;
+}
+.signup input:focus {
+  outline: none;
+}
+.signup label {
+  padding-left: 15px;
+}
+.main-btn {
+  width: 80%;
+  padding: 5px;
+  height: 35px;
+  background-color: #228b22;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 35px;
+}
+.form-switch {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.form-switch button {
+  background: none;
+  border: none;
+  height: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px) {
+  .home {
+    flex-direction: column;
+  }
+  .welcome,
+  .signup {
+    width: 80%;
+    margin-bottom: 50px;
+    padding: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  nav ul li:nth-child(1) {
+    margin: 0;
+  }
+}

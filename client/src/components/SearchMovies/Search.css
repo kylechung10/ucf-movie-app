@@ -1,0 +1,70 @@
+.search-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Search heading styling */
+.search-header {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Styling the search bar */
+.search-bar {
+  width: 100%;
+  margin: 30px;
+}
+.search-bar input {
+  width: 80%;
+  height: 40px;
+  padding-left: 30px;
+  font-size: 24px;
+  border-radius: 40px 0 0 40px;
+  border: none;
+}
+.search-bar input:focus {
+  outline: none;
+}
+.search-bar button {
+  width: 20%;
+  height: 40px;
+  font-size: 24px;
+  border-radius: 0 40px 40px 0;
+  border: none;
+  background-color: #0785f2;
+  color: #fff;
+}
+.search-bar button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/*Button styling*/
+.search-page .saved {
+  width: 100%;
+  margin-top: 10px;
+  align-self: center;
+  background: none;
+  border: none;
+  color: #074dd9;
+  font-size: 18px;
+}
+.search-page .add {
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 10px 0 10px 0;
+  border-radius: 20px;
+  border: none;
+  background-color: #f7bd61;
+}
+.search-page .add:hover {
+  cursor: pointer;
+  color: #fff;
+}

@@ -1,0 +1,22 @@
+.favorite-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Button styling*/
+.favorite-page button {
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 10px 0 10px 0;
+  border-radius: 20px;
+  border: none;
+  background-color: #bf0413;
+  color: #fff;
+}
+.favorite-page button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
