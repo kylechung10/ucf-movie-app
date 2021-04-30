@@ -12,7 +12,7 @@ export default function Displays(props) {
 
   switch (display) {
     case "account":
-      component = <AccountDetails username={userLogin} />;
+      component = <AccountDetails username={userLogin} logout={props.logout} />;
       break;
     case "favorite":
       component = <FavoriteMovies username={userLogin} />;

@@ -47,7 +47,7 @@ export default class Database {
         .forEach((doc) => {
           movieArray.push(doc);
         });
-      return { movies: movieArray };
+      return movieArray;
     }
   }
 

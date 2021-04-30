@@ -1,7 +1,7 @@
 .home button:hover,
 nav button:hover {
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 /* Navigation styling */
 nav {
@@ -30,22 +30,33 @@ nav ul li button {
   font-size: 24px;
   border: none;
   background: none;
+  color: #f2f2f2;
   padding: 5px;
 }
-.red-btn {
-  border: #b23b3b 1px solid;
-  color: #b23b3b;
-  padding: 5px;
+.logout-btn {
+  /* border: #b23b3b 1px solid;
+  color: #b23b3b; */
+  background: #0785f2;
+  padding: 10px 20px 10px 20px;
+  border-radius: 30px;
 }
 
 /*Home Styling*/
 .home {
-  height: 90vh;
-  min-height: 600px;
+  height: 100%;
+  min-height: 90vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+.welcome-logo {
+  color: #f2f2f2;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff, 0 0 40px #0ff;
+  text-transform: uppercase;
+  font-size: 70px !important;
+  letter-spacing: 8px;
+  margin-bottom: 50px !important;
 }
 .welcome {
   display: flex;
@@ -54,24 +65,32 @@ nav ul li button {
   justify-content: space-evenly;
   text-align: center;
   line-height: 30px;
+  width: 60%;
+  height: 500px;
+  background-color: #011126;
+  border-radius: 35px;
+  box-shadow: 10px 5px 15px #010b1a;
+}
+.welcome div {
   width: 400px;
-  height: 50%;
 }
 .greeting {
   font-size: 24px;
   padding: 10px;
+  margin-bottom: 20px;
 }
 .home h2 {
   font-size: 36px;
 }
 .signup {
   width: 400px;
-  height: 50%;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid #000;
+  background-color: #011126;
+  box-shadow: 10px 5px 15px #010b1a;
   border-radius: 30px;
 }
 .input-field {
@@ -86,6 +105,7 @@ nav ul li button {
   border-radius: 35px;
   border: none;
   margin-top: 5px;
+  background-color: #fff;
 }
 .signup input:focus {
   outline: none;
@@ -97,7 +117,7 @@ nav ul li button {
   width: 80%;
   padding: 5px;
   height: 35px;
-  background-color: #228b22;
+  background-color: #0785f2;
   color: #f2f2f2;
   border: none;
   border-radius: 35px;
@@ -115,6 +135,7 @@ nav ul li button {
   font-size: 16px;
   font-weight: bold;
   text-decoration: underline;
+  color: #f2f2f2;
 }
 
 @media screen and (max-width: 1100px) {
@@ -126,6 +147,14 @@ nav ul li button {
     width: 80%;
     margin-bottom: 50px;
     padding: 10px;
+  }
+  .welcome-logo {
+    font-size: 50px !important;
+    letter-spacing: normal;
+  }
+  nav {
+    background-color: #011126;
+    margin-bottom: 40px;
   }
   nav ul {
     flex-direction: column;

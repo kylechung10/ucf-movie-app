@@ -75,7 +75,7 @@ export default function Home() {
                 </button>
               </li>
               <li>
-                <button className="red-btn" onClick={() => logOut()}>
+                <button className="logout-btn" onClick={() => logOut()}>
                   Log Out
                 </button>
               </li>
@@ -83,26 +83,33 @@ export default function Home() {
           ) : undefined}
         </ul>
       </nav>
-      <Displays display={switchComponent} userLogin={username} />
+      <Displays
+        display={switchComponent}
+        userLogin={username}
+        logout={logOut}
+      />
       {switchComponent === "home" ? (
         <div className="home">
           <div className="welcome">
-            <h1>Movie Finder</h1>
-            <p className="greeting">
-              Welcome {username ? <strong>{username} </strong> : undefined}to
-              Movie Finder!
-            </p>
-            <p>
-              Search for movies from the database of over 23,000 movies! If you
-              create an account you will gain the ability to save your favorite
-              movies to your personal account.
-              <br />
-              <strong>
-                {username
-                  ? "Head to the Search tab to begin!"
-                  : "Register or Sign In to begin!"}
-              </strong>
-            </p>
+            <h1 className="welcome-logo">Movie Finder</h1>
+            <div>
+              <p className="greeting">
+                Welcome, {username ? <strong>{username}, </strong> : undefined}
+                to Movie Finder!
+              </p>
+              <p>
+                Search for movies from the database of over 23,000 movies! If
+                you create an account you will gain the ability to save your
+                favorite movies to your personal account.
+                <br />
+                <br />
+                <strong>
+                  {username
+                    ? "Head to the Search tab to begin!"
+                    : "Register or Sign In to begin!"}
+                </strong>
+              </p>
+            </div>
           </div>
           {username ? undefined : (
             // If the user is signed in, hide the sign in/create account fields

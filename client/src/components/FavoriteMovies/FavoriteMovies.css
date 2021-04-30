@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 }
 
 /*Button styling*/
@@ -15,8 +16,16 @@
   border: none;
   background-color: #bf0413;
   color: #fff;
+  opacity: 0.75;
 }
 .favorite-page button:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.9;
+}
+
+.favorite-page h2 {
+  padding: 30px;
+  text-align: center;
+  background-color: #011126;
+  border-radius: 20px;
 }

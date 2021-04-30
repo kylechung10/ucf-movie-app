@@ -6,7 +6,7 @@ export default function SearchMovies(props) {
   // If user is logged in, set variable
   const { username } = props;
   // Movie results
-  const [movieResults, setMovieResults] = useState("");
+  const [movieResults, setMovieResults] = useState([]);
   // User input for search
   const [inputMovie, setInputMovie] = useState("");
   // If the search has been ran
@@ -58,14 +58,14 @@ export default function SearchMovies(props) {
         {username === "" ? (
           <>
             <p>
-              You are currently not signed in. <br />
+              You are not currently signed in. <br />
               You can still search for movies, but will not be able to save them
               to your favorites.
             </p>
           </>
         ) : (
           <>
-            <h3>Welcome, {username}</h3>
+            <h2>Welcome, {username}</h2>
             <p>Search for movies and add them directly to your favorites!</p>
           </>
         )}
@@ -81,7 +81,7 @@ export default function SearchMovies(props) {
       <div className="movie-results">
         {ranSearch
           ? // Display the movies from the search
-            movieResults.movies.map((movie, key) => {
+            movieResults.map((movie, key) => {
               return (
                 <div key={key} className="movie-panel">
                   <div className="img-container">
@@ -119,6 +119,10 @@ export default function SearchMovies(props) {
             })
           : undefined}
       </div>
+      {/* If the search is ran and the array is still 0, display no results were found */}
+      {ranSearch && movieResults.length === 0 ? (
+        <h2 className="no-results">No Results Found!</h2>
+      ) : undefined}
     </div>
   );
 }

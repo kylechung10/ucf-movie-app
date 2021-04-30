@@ -39,40 +39,51 @@ export default function Account(props) {
       });
   };
 
-  // Refresh the page and return home to reset page after deleting account
-  const refreshPage = () => {
-    window.location.reload(false);
-  };
-
   return (
-    <div className="account-page">
-      <h1>Account Details</h1>
-      <p>Welcome, {username}!</p>
-      <p>Number of favorite movies: {favoriteMovies.length}</p>
-      <div className="delete-box">
-        <label htmlFor="deleteInput">Verify Username</label>
-        {/* Require the user to verify their account username before deleting */}
-        <input
-          value={verifyDelete}
-          className="deleteInput"
-          type="text"
-          placeholder="Username"
-          onChange={(e) => setVerifyDelete(e.target.value)}
-        />
-        <button onClick={() => removeAccount()}>Delete Account</button>
-      </div>
+    <>
       {/* If the delete function has been run, check the values */}
       {deleteConfirm ? (
-        // If the returned value from the delete function matches input, force the user to reload the page
+        // If the returned value from the delete function matches input, force the user to logout and return home
         verifyDelete === accountDeletedReponse ? (
           <div className="refresh-page">
-            <p>Successful delete</p>
-            <button onClick={() => refreshPage()} className="refresh-button">
-              Return to Home
-            </button>
+            <div>
+              <h1>Successfully Deleted Account:</h1>
+              <h2>{accountDeletedReponse}</h2>
+              <button onClick={props.logout} className="refresh-button">
+                Return to Home
+              </button>
+            </div>
           </div>
         ) : undefined
-      ) : undefined}
-    </div>
+      ) : (
+        <div className="account-page">
+          <div className="account-container">
+            <div className="account-details">
+              <h1>Account Details</h1>
+              <div>
+                <h2>Welcome, {username}!</h2>
+                <p>
+                  Number of favorite movies:
+                  <strong> {favoriteMovies.length}</strong>
+                </p>
+              </div>
+            </div>
+            <div className="delete-box">
+              <h2>Delete Account</h2>
+              <label>Verify Username:</label>
+              {/* Require the user to verify their account username before deleting */}
+              <input
+                value={verifyDelete}
+                className="deleteInput"
+                type="text"
+                placeholder="Username"
+                onChange={(e) => setVerifyDelete(e.target.value)}
+              />
+              <button onClick={() => removeAccount()}>DELETE ACCOUNT</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
