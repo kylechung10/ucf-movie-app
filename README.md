@@ -29,11 +29,12 @@ TECHNICAL REQUIREMENTS
 
   - Home
   - Displays
+  - SearchMovies
   - FavoriteMovies
   - AccountDetails
 
-- DOCUMENTATION -
-  MOVIE FINDER FEATURES
+- DOCUMENTATION
+- MOVIE FINDER FEATURES
 
 SERVER
 
