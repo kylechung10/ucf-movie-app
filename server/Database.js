@@ -1,7 +1,6 @@
 import MongoClient from "mongodb";
 
-const url =
-  "mongodb+srv://KyleChung:NXImKPJpkYVCtOoz@cluster0.yuzwq.mongodb.net";
+// Deleted inactive mongoDB connection
 
 export default class Database {
   constructor() {
